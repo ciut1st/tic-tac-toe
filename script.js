@@ -74,8 +74,9 @@ const Game = (() => {
         } else if (checkForTie(Gameboard.getGameboard())) {
             gameOver = true
             displayController.renderMessage("It is a tie!")
+        } else {
+            currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0
         }
-        currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0
     }
 
     const restart = () => {
